@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="text-center my-5">
+    <h3>{{LeagueName}} Standings</h3>
+  </div>
+  <table class="table table-bordered table-hover">
+    <thead class="bg-secondary text-white">
+      <tr>
+        <th>Team</th>
+        <th>Games</th>
+        <th>Points</th>
+        <th>Goal For</th>
+        <th>Goal Againts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let currentRow of Standings">
+        <td>{{currentRow.TeamName}}</td>
+        <td>{{currentRow.GamesPlayed}}</td>
+        <td>{{currentRow.wins*3 + currentRow.Ties}}</td>
+        <td>{{currentRow.GoalsFor}}</td>
+        <td>{{currentRow.GoalsAgaints}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
